@@ -10,7 +10,11 @@ A small status bar on the Windows taskbar for Claude Code. Each open session get
 
 Hover over the bar to see every session with its project folder and what it's doing. The bar sits just left of Weather Bar (or Music Bar, or the tray icons), and only shows while a session is open.
 
-It works for Claude Code in the terminal, in VS Code, and in the Code tab of the Claude desktop app. It can't see cloud sessions or normal chats.
+## Which sessions it shows
+
+Only Claude Code sessions that run on this computer, because it works through local hooks in your own `~/.claude/settings.json`. It's built for, and tested with, the Claude Code extension in VS Code.
+
+It can't see sessions that run somewhere else: cloud sessions (Claude Code on the web, or the desktop app's Code tab set to Cloud), Cowork, or normal chats. Those never read your computer's settings, so the hook never runs for them.
 
 ## How it works
 
